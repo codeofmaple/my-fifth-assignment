@@ -15,41 +15,49 @@
 <body>
     <header>
         <!-- Nav section -->
-        <nav class="py-6 w-11/12 mx-auto flex justify-between items-center">
-            <div class="left-div flex items-center gap-3">
-                <img src="./assets/logo.png" alt="" class="size-[50px]">
-                <h1 class="font-black text-xl leading-6 text-[#006747de]">Emergency <br> Service</h1>
+        <nav class="py-2 md:py-6 px-2 md:w-11/12 mx-auto flex justify-between items-center">
+            <!-- left nav -->
+            <div class="left-div flex items-center md:gap-3">
+                <img src="./assets/logo.png" alt="" class=" size-10 md:size-[50px] md:scale-100 scale-75">
+                <h1 class="font-black text-sm md:text-xl leading-4 md:leading-6 text-[#006747de]">Emergency <br> Service
+                </h1>
             </div>
-            <div class="flex gap-5 right-div ">
-                <div class="flex gap-2 justify-center items-center bg-[#41ff6b1a] h-14 w-32 p-3 rounded-[50px]">
-                    <span class="font-black">0</span><img src="./assets/heart.png" alt="" class="size-7">
+            <!-- right nav -->
+            <div class="flex  md:flex-row gap-1 md:gap-5 right-div ">
+                <div
+                    class="flex gap-1 md:gap-2 justify-center items-center bg-[#41ff6b1a] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px]">
+                    <span class="font-medium md:font-black text-xs">0</span><img src="./assets/heart.png" alt=""
+                        class="size-5 md:size-7">
                 </div>
-                <div class="flex gap-2 justify-center items-center bg-[#41ff6b1a] h-14 w-32 p-3 rounded-[50px]">
-                    <span class="font-black">100</span><img src="./assets/coin.png" alt="" class="size-7">
+                <div
+                    class="flex gap-1 md:gap-2 justify-center items-center bg-[#41ff6b1a] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px]">
+                    <span class="font-medium md:font-black text-xs">100</span><img src="./assets/coin.png" alt=""
+                        class="size-5 md:size-7">
                 </div>
                 <button
-                    class="flex gap-2 justify-center items-center bg-[#00a63e] h-14 w-32 p-3 rounded-[50px] text-white font-black">
-                    <span class="font-black">0</span>
-                    <p>Copy</p>
+                    class="flex gap-1 md:gap-2 justify-center items-center bg-[#00a63e] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px] text-white">
+                    <span class="font-medium md:font-black text-xs">0</span>
+                    <p class="font-medium md:font-black text-xs">Copy</p>
                 </button>
             </div>
         </nav>
 
         <!-- Hero Section -->
         <section
-            class="hero-section flex flex-col items-center py-5 px-16 bg-[linear-gradient(90deg,_#013923_0%,_#006747_50%,_#013223_100%)]">
-            <img src="./assets/logo-dark.png" alt="" class="size-24">
-            <h1 class="font-bold text-[2.5rem] text-white">Emergency Service Directory</h1>
-            <p class="text-white text-xl font-semibold">Government Emergency Services at Your Fingertip – A Project by
-                Government of the
-                People’s Republic of Bangladesh</p>
+            class="hero-section flex flex-col items-center py-5 px-2 md:px-16 bg-[linear-gradient(90deg,_#013923_0%,_#006747_50%,_#013223_100%)]">
+            <img src="./assets/logo-dark.png" alt="" class="size-12 md:size-24">
+            <h1 class="font-bold text-xl mt-1 md:mt-3 md:text-[2.5rem] text-white">Emergency Service Directory</h1>
+            <p class="text-white text-center mt-1 md:mt-3 text-xs md:text-xl md:font-semibold">
+                Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of
+                Bangladesh
+            </p>
         </section>
     </header>
 
     <main class="bg-[#f5fff6]">
         <!-- section left -->
-        <section class="main-section grid grid-cols-12 w-11/12 mx-auto pt-12 pb-20 gap-7">
-            <section class="left-section col-span-9 grid grid-cols-3 gap-7">
+        <section class="main-section flex flex-col md:grid md:grid-cols-12 md:w-11/12 px-2 md:px-0 mx-auto pt-5 md:pt-12 pb-8 md:pb-20 md:gap-7 gap-4">
+            <section class="left-section flex flex-col md:col-span-9 md:grid md:grid-cols-3 md:gap-7 gap-4">
                 <!-- card-1 -->
                 <div class="shadow-sm p-8 rounded-xl bg-white">
                     <div class="flex justify-between">
@@ -86,7 +94,8 @@
                         <p class="text-lg text-[#5c5c5c]">Police</p>
 
                         <p class="font-bold text-[2rem] mt-3"><span>999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Police</p>
+                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Police
+                        </p>
 
                         <div class="grid grid-cols-2 gap-2 mt-6">
                             <button
@@ -134,7 +143,8 @@
                         <p class="text-lg text-[#5c5c5c]">Ambulance</p>
 
                         <p class="font-bold text-[2rem] mt-3"><span>1994-999999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Health</p>
+                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Health
+                        </p>
 
                         <div class="grid grid-cols-2 gap-2 mt-6">
                             <button
@@ -206,7 +216,8 @@
                         <p class="text-lg text-[#5c5c5c]">Electricity Outage</p>
 
                         <p class="font-bold text-[2rem] mt-3"><span>16216</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Electricity</p>
+                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">
+                            Electricity</p>
 
                         <div class="grid grid-cols-2 gap-2 mt-6">
                             <button
@@ -254,7 +265,8 @@
                         <p class="text-lg text-[#5c5c5c]">Bangladesh Railway</p>
 
                         <p class="font-bold text-[2rem] mt-3"><span>163</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Travel</p>
+                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Travel
+                        </p>
 
                         <div class="grid grid-cols-2 gap-2 mt-6">
                             <button
@@ -303,7 +315,7 @@
                         </p>
                     </div>
                 </section>
-            </section>  
+            </section>
         </section>
     </main>
 
