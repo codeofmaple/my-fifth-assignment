@@ -7,12 +7,31 @@ for (let heart of hearts) {
         document.getElementById("heart-count").innerText = heartCount;
     })
 }
+// Copy Icons function;
+const copyBtns = document.getElementsByClassName("copy-btn")
+let copyCount = Number(document.getElementById("copy-count").innerText);
+
+for (let copyBtn of copyBtns) {
+    copyBtn.addEventListener("click", function () {
+        copyCount = copyCount + 1;
+        document.getElementById("copy-count").innerText = copyCount;
+
+        let copyNum = copyBtn.parentNode.parentNode.childNodes[5].innerText;
+        navigator.clipboard.writeText(copyNum)
+            .then(function() {
+                alert(`The number has been copied: ${copyNum}`);
+            })
+            .catch(function(err) {
+                console.error(`Failed to copy the number: ${err}`);
+            });
+    })
+}
+
+
 
 // Call Buttons function
-
 let totalCoin = Number(document.getElementById("total-coin").innerText)
 let callHistoryContainer = document.getElementById("call-history");
-
 
 const callBtns = document.getElementsByClassName("call-btn");
 for (let callBtn of callBtns) {
@@ -22,7 +41,7 @@ for (let callBtn of callBtns) {
         if (totalCoin >= 20) {
             totalCoin = totalCoin - 20;
             document.getElementById("total-coin").innerText = totalCoin;
-            alert(`📞 calling ${toCall} ${callNum}...`)
+            alert(`📞 Calling ${toCall}: ${callNum}...`)
 
             let currentTime = new Date().toLocaleTimeString();
             let newHistory = document.createElement("div");
@@ -40,19 +59,12 @@ for (let callBtn of callBtns) {
             callHistoryContainer.append(newHistory);
         }
         else {
-            alert("you don't have enough coins");
+            alert("❌ You don't have enough coins. You need at least 20 coins to make a call.");
         }
     })
 
     let clearBtn = document.getElementById("clear-btn");
     clearBtn.addEventListener("click", function () {
         callHistoryContainer.innerHTML = ``;
-
-
-        // let currentTime = new Date();
-        // console.log(currentTime.toLocaleTimeString());
-
-
-
     })
 }
