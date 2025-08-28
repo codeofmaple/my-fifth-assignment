@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Service</title>
+    <title>Emergency Service Directory</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -20,6 +20,7 @@
             font-family: "Hind Madurai", sans-serif;
             font-style: normal;
         }
+
         .roboto {
             font-family: "Roboto", sans-serif;
             font-optical-sizing: auto;
@@ -27,6 +28,7 @@
             font-variation-settings:
                 "wdth" 100;
         }
+
         .inter {
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
@@ -49,13 +51,13 @@
             <div class="flex  md:flex-row gap-1 md:gap-5 right-div ">
                 <div
                     class="flex gap-1 md:gap-2 justify-center items-center bg-[#41ff6b1a] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px]">
-                    <span id="heart-count" class="font-medium md:font-black text-xs">0</span><img src="./assets/heart.png" alt=""
-                        class="size-5 md:size-7">
+                    <span id="heart-count" class="font-medium md:font-black text-xs">0</span><img
+                        src="./assets/heart.png" alt="" class="size-5 md:size-7">
                 </div>
                 <div
                     class="flex gap-1 md:gap-2 justify-center items-center bg-[#41ff6b1a] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px]">
-                    <span class="font-medium md:font-black text-xs">100</span><img src="./assets/coin.png" alt=""
-                        class="size-5 md:size-7">
+                    <span id="total-coin" class="font-medium md:font-black text-xs">100</span><img
+                        src="./assets/coin.png" alt="" class="size-5 md:size-7">
                 </div>
                 <button
                     class="flex gap-1 md:gap-2 justify-center items-center bg-[#00a63e] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px] text-white">
@@ -87,7 +89,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">National Emergency Number</h2>
@@ -102,7 +105,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -113,7 +116,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#dfefff]"><img
                                 src="./assets/police.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Police Helpline Number</h2>
@@ -129,7 +133,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -140,7 +144,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/fire-service.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Fire Service Number</h2>
@@ -155,7 +160,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -166,7 +171,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/ambulance.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Ambulance Service</h2>
@@ -182,7 +188,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -193,7 +199,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Women & Child Helpline</h2>
@@ -208,7 +215,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -219,7 +226,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Anti-Corruption Helpline</h2>
@@ -234,7 +242,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -245,7 +253,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Electricity Helpline</h2>
@@ -260,7 +269,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -271,7 +280,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Brac Helpline</h2>
@@ -286,7 +296,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -297,7 +307,8 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                     <div class="">
                         <h2 class="font-bold text-2xl mt-4 hind-madurai">Bangladesh Railway Helpline</h2>
@@ -313,7 +324,7 @@
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
-                            <button class="btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
+                            <button class="call-btn btn btn-outline bg-[#00a63e] border-none text-white rounded-lg">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -323,32 +334,25 @@
 
 
             <!-- section right -->
-            <section class="col-span-3 h-full shadow-sm p-8 rounded-xl bg-white">
-
+            <aside class="col-span-3 h-full shadow-sm p-8 rounded-xl bg-white">
                 <div class="flex justify-between mb-4">
                     <div class="flex items-center gap-2 font-medium text-xl roboto">
                         <i class="fa-regular fa-clock"></i>
                         <p>Call History</p>
                     </div>
-                    <button
+                    <button id="clear-btn"
                         class="btn btn-outline flex gap-2 justify-center items-center bg-[#00a63e] h-14 w-32 p-3 rounded-[50px] text-white font-black inter">
                         Clear
                     </button>
                 </div>
 
-                <!-- sample section -->
-                <section class="flex flex-col gap-2">
-                    <div class="flex justify-between bg-[#fafafa] p-4 rounded-lg text-[1.125rem]">
-                        <div>
-                            <h1 class=" font-semibold inter">Fire Service Number</h1>
-                            <p class="hind-madurai">999</p>
-                        </div>
-                        <p class="flex justify-center items-center hind-madurai">
-                            11:36:58 AM
-                        </p>
-                    </div>
-                </section>
-            </section>
+                <!-- sample div -->
+                <div id="call-history" class="flex flex-col gap-2">
+                    <!-- call history will be added here -->
+                </div>
+
+            </aside>
+
         </section>
     </main>
 
