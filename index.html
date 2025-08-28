@@ -10,12 +10,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        .hind-madurai {
+            font-family: "Hind Madurai", sans-serif;
+            font-style: normal;
+        }
+        .roboto {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <!-- Nav section -->
-        <nav class="py-2 md:py-6 px-2 md:w-11/12 mx-auto flex justify-between items-center">
+        <nav class="inter py-2 md:py-6 px-2 md:w-11/12 mx-auto flex justify-between items-center">
             <!-- left nav -->
             <div class="left-div flex items-center md:gap-3">
                 <img src="./assets/logo.png" alt="" class=" size-10 md:size-[50px] md:scale-100 scale-75">
@@ -26,7 +49,7 @@
             <div class="flex  md:flex-row gap-1 md:gap-5 right-div ">
                 <div
                     class="flex gap-1 md:gap-2 justify-center items-center bg-[#41ff6b1a] h-8 md:h-14 w-[4.5rem] md:w-32 p-3 rounded-[50px]">
-                    <span class="font-medium md:font-black text-xs">0</span><img src="./assets/heart.png" alt=""
+                    <span id="heart-count" class="font-medium md:font-black text-xs">0</span><img src="./assets/heart.png" alt=""
                         class="size-5 md:size-7">
                 </div>
                 <div
@@ -44,7 +67,7 @@
 
         <!-- Hero Section -->
         <section
-            class="hero-section flex flex-col items-center py-5 px-2 md:px-16 bg-[linear-gradient(90deg,_#013923_0%,_#006747_50%,_#013223_100%)]">
+            class="hero-section hind-madurai flex flex-col items-center py-5 px-2 md:px-16 bg-[linear-gradient(90deg,_#013923_0%,_#006747_50%,_#013223_100%)]">
             <img src="./assets/logo-dark.png" alt="" class="size-12 md:size-24">
             <h1 class="font-bold text-xl mt-1 md:mt-3 md:text-[2.5rem] text-white">Emergency Service Directory</h1>
             <p class="text-white text-center mt-1 md:mt-3 text-xs md:text-xl md:font-semibold">
@@ -56,23 +79,26 @@
 
     <main class="bg-[#f5fff6]">
         <!-- section left -->
-        <section class="main-section flex flex-col md:grid md:grid-cols-12 md:w-11/12 px-2 md:px-0 mx-auto pt-5 md:pt-12 pb-8 md:pb-20 md:gap-7 gap-4">
+        <section
+            class="main-section flex flex-col md:grid md:grid-cols-12 md:w-11/12 px-2 md:px-0 mx-auto pt-5 md:pt-12 pb-8 md:pb-20 md:gap-7 gap-4">
             <section class="left-section flex flex-col md:col-span-9 md:grid md:grid-cols-3 md:gap-7 gap-4">
                 <!-- card-1 -->
                 <div class="shadow-sm p-8 rounded-xl bg-white">
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">National Emergency Number</h2>
-                        <p class="text-lg text-[#5c5c5c]">National Emergency</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">National Emergency Number</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">National Emergency</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">All</p>
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>999</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            All</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -87,17 +113,19 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#dfefff]"><img
                                 src="./assets/police.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Police Helpline Number</h2>
-                        <p class="text-lg text-[#5c5c5c]">Police</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Police Helpline Number</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Police</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Police
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>999</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Police
                         </p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -112,16 +140,18 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/fire-service.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Fire Service Number</h2>
-                        <p class="text-lg text-[#5c5c5c]">Fire Service</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Fire Service Number</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Fire Service</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Fire</p>
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>999</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Fire</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -136,17 +166,19 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/ambulance.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Ambulance Service</h2>
-                        <p class="text-lg text-[#5c5c5c]">Ambulance</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Ambulance Service</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Ambulance</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>1994-999999</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Health
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>1994-999999</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Health
                         </p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -161,16 +193,18 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Women & Child Helpline</h2>
-                        <p class="text-lg text-[#5c5c5c]">Women & Child Helpline</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Women & Child Helpline</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Women & Child Helpline</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>109</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Help</p>
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>109</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Help</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -185,16 +219,18 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Anti-Corruption Helpline</h2>
-                        <p class="text-lg text-[#5c5c5c]">Anti-Corruption</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Anti-Corruption Helpline</h2>
+                        <p class="text-lg text-[#5c5c5c]  roboto">Anti-Corruption</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>106</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Govt</p>
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>106</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Govt</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -209,17 +245,18 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Electricity Helpline</h2>
-                        <p class="text-lg text-[#5c5c5c]">Electricity Outage</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Electricity Helpline</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Electricity Outage</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>16216</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>16216</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
                             Electricity</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -234,16 +271,18 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Brac Helpline</h2>
-                        <p class="text-lg text-[#5c5c5c]">Brac</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Brac Helpline</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Brac</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>16445</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">NGO</p>
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>16445</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            NGO</p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -258,17 +297,19 @@
                     <div class="flex justify-between">
                         <div class="size-[60px] rounded-2xl items-center flex justify-center bg-[#ffe3e2]"><img
                                 src="./assets/emergency.png" alt="emergency" class="size-[32px]" /></div>
-                        <div class="items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
+                        <div   class="heart-btn items-center flex justify-center"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="">
-                        <h2 class="font-bold text-2xl mt-4">Bangladesh Railway Helpline</h2>
-                        <p class="text-lg text-[#5c5c5c]">Bangladesh Railway</p>
+                        <h2 class="font-bold text-2xl mt-4 hind-madurai">Bangladesh Railway Helpline</h2>
+                        <p class="text-lg text-[#5c5c5c] roboto">Bangladesh Railway</p>
 
-                        <p class="font-bold text-[2rem] mt-3"><span>163</span></p>
-                        <p class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full">Travel
+                        <p class="font-bold text-[2rem] mt-3 roboto"><span>163</span></p>
+                        <p
+                            class="text-lg text-[#5c5c5c] py-[6px] px-4 bg-[#f2f2f2] inline-block rounded-full hind-madurai">
+                            Travel
                         </p>
 
-                        <div class="grid grid-cols-2 gap-2 mt-6">
+                        <div class="grid grid-cols-2 gap-2 mt-6 roboto">
                             <button
                                 class="btn btn-outline border divide-solid border-[#d4d6d5] text-[#5c5c5c] rounded-lg">
                                 <i class="fa-regular fa-copy"></i>Copy</button>
@@ -285,32 +326,24 @@
             <section class="col-span-3 h-full shadow-sm p-8 rounded-xl bg-white">
 
                 <div class="flex justify-between mb-4">
-                    <div class="flex items-center gap-2 font-medium text-xl">
+                    <div class="flex items-center gap-2 font-medium text-xl roboto">
                         <i class="fa-regular fa-clock"></i>
                         <p>Call History</p>
                     </div>
                     <button
-                        class="btn btn-outline flex gap-2 justify-center items-center bg-[#00a63e] h-14 w-32 p-3 rounded-[50px] text-white font-black">
+                        class="btn btn-outline flex gap-2 justify-center items-center bg-[#00a63e] h-14 w-32 p-3 rounded-[50px] text-white font-black inter">
                         Clear
                     </button>
                 </div>
+
                 <!-- sample section -->
                 <section class="flex flex-col gap-2">
                     <div class="flex justify-between bg-[#fafafa] p-4 rounded-lg text-[1.125rem]">
                         <div>
-                            <h1 class=" font-semibold">Fire Service Number</h1>
-                            <p>999</p>
+                            <h1 class=" font-semibold inter">Fire Service Number</h1>
+                            <p class="hind-madurai">999</p>
                         </div>
-                        <p class="flex justify-center items-center">
-                            11:36:58 AM
-                        </p>
-                    </div>
-                    <div class="flex justify-between bg-[#fafafa] p-4 rounded-lg text-[1.125rem]">
-                        <div>
-                            <h1 class=" font-semibold">Fire Service Number</h1>
-                            <p>999</p>
-                        </div>
-                        <p class="flex justify-center items-center">
+                        <p class="flex justify-center items-center hind-madurai">
                             11:36:58 AM
                         </p>
                     </div>
@@ -319,6 +352,8 @@
         </section>
     </main>
 
+
+    <script src="./script/home.js"></script>
 </body>
 
 </html>
