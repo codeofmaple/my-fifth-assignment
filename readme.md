@@ -3,13 +3,14 @@
 ### Question and Answer part:
 
 
-- **Question 1:** What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-**Answer:** 
+### Question 1
+What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
+**Answer:** 
 **getElementById:** getElementById returns the single element that has the given id.
 - Example: getElementById("right-nav"), now i will get the element that contains "right-nav" id.
 
-**getElementsByClassName:** getElementsByClassName returns an array-like object which is a HTMLCollection and inside the array-like object there are a collection of all elements with the given class name. And it updates automatically if DOM changes
+**getElementsByClassName:** getElementsByClassName returns an array-like object which is a HTMLCollection and inside the array-like object there are a collection of all elements with the given class name. And it updates automatically if DOM changes.
 - Example: getElementsByClassName("copy-btn"), now i will get all elements that contain "copy-btn" class name.
 
 **querySelector:** querySelector returns the first element that contains/matches the given CSS selector;
@@ -19,9 +20,10 @@
 - Example: querySelector(".item-card"), now i will get all elements that matches ".item-card" selector. And Also it does not update automatically if DOM changes, it's static.
 
 
-- **Question 2:** How do you **create and insert a new element into the DOM**?
-**Answer:** 
+### Question 1
+How do you **create and insert a new element into the DOM**?
 
+**Answer:** 
 First i need to create an element and append it to the container/parent.
 - Example: 
 let newDiv = document.createElement("div");
@@ -33,6 +35,13 @@ parent.appendChild.(newDiv);
 First i created an element inside newDiv variable than added text. Secondly i assigned the parent element inside parent variable and finally i added the created element to the parent element with this: parent.appendChild.(newDiv);
 
 
-- **Question 3:**
+### Question 3
+What is **Event Bubbling** and how does it work?
+
+**Answer:** 
+Event Bubbling is a process where an event is triggered on a child element and it propagates upwards through its parent element. And if not manually stop it, it continues to the end(Document).
+- Example: Suppose i clicked on a button and the event triggered, now the event will propagate to its div parent than body and so on.
+
+
 - **Question 4:**
 - **Question 5:**
