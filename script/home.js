@@ -1,4 +1,4 @@
-// Heart Icons function;
+// Heart Icons functionalities;
 const hearts = document.getElementsByClassName("heart-btn")
 let heartCount = Number(document.getElementById("heart-count").innerText);
 for (let heart of hearts) {
@@ -7,7 +7,7 @@ for (let heart of hearts) {
         document.getElementById("heart-count").innerText = heartCount;
     })
 }
-// Copy Icons function;
+// Copy Icons functionalities;
 const copyBtns = document.getElementsByClassName("copy-btn")
 let copyCount = Number(document.getElementById("copy-count").innerText);
 
@@ -26,10 +26,7 @@ for (let copyBtn of copyBtns) {
             });
     })
 }
-
-
-
-// Call Buttons function
+// Call Buttons functionalities
 let totalCoin = Number(document.getElementById("total-coin").innerText)
 let callHistoryContainer = document.getElementById("call-history");
 
@@ -41,7 +38,10 @@ for (let callBtn of callBtns) {
         if (totalCoin >= 20) {
             totalCoin = totalCoin - 20;
             document.getElementById("total-coin").innerText = totalCoin;
-            alert(`📞 Calling ${toCall}: ${callNum}...`)
+            // alert(`📞 Calling ${toCall} ${callNum}...`)
+            alert(`📞 Calling... \n${toCall} ${callNum}`)
+
+
 
             let currentTime = new Date().toLocaleTimeString();
             let newHistory = document.createElement("div");
@@ -51,7 +51,7 @@ for (let callBtn of callBtns) {
                             <h1 class=" font-semibold inter">${toCall} </h1>
                             <p class="hind-madurai">${callNum}</p>
                         </div>
-                        <p class="flex justify-center items-center hind-madurai">
+                        <p class="flex justify-center items-center hind-madurai whitespace-nowrap">
                             ${currentTime}
                         </p>
                     </div>
