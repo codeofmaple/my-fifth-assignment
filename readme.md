@@ -84,9 +84,9 @@ What is the difference between **preventDefault() and stopPropagation()** method
 
 **preventDefault():** preventDefault() prevents the default behavior of an element when an event occur.
 
-example: When working with card buttons within < form > tag, than clicking the btn automatically reload the webpage. So to stop this behavior we use preventDefault().
+Example: When working with card buttons within < form > tag, than clicking the btn automatically reload the webpage. So to stop this behavior we use preventDefault().
 
 **stopPropagation():** stopPropagation() stops the propagation/bubbling-up process up to the DOM tree. So the event stop where the event occur and does not go up.
 
-example: suppose we have a div(parent) and a div(child) and both have the event-listener on them. And now if we add stopPropagation() to the div(child) element, the parent event-listener will not be triggered. Only the child event-listener will be triggered.
+Example: Suppose we have a div(parent) and a div(child) and both have the event-listener on them. And now if we add stopPropagation() to the div(child) element, the parent event-listener will not be triggered. Only the child event-listener will be triggered.
 
