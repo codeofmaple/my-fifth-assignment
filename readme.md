@@ -63,7 +63,8 @@ html:
   < li >Item 1</ li >
   < li >Item 2</ li >
   < li >Item 3</ li >
-</ul>
+</ ul>
+
 script:
   const parentList = document.getElementById("my-list");
   parentList.addEventListener("click", function(event) {
@@ -72,12 +73,20 @@ script:
     }
   });
 
+
   Here i added the the event-listener on the parent(parentList) and if i clicked on any child the event will bubble up to its parent(parentList), the event-listener on the parent will capture it. And the alert text will pop up.
 
 
 ### Question 5
-What is **Event Delegation** in JavaScript? Why is it useful?
+What is the difference between **preventDefault() and stopPropagation()** methods?
 
 **Answer:** 
 
+**preventDefault():** preventDefault() prevents the default behavior of an element when an event occur.
+
+example: When working with card buttons within < form > tag, than clicking the btn automatically reload the webpage. So to stop this behavior we use preventDefault().
+
+**stopPropagation():** stopPropagation() stops the propagation/bubbling-up process up to the DOM tree. So the event stop where the event occur and does not go up.
+
+example: suppose we have a div(parent) and a div(child) and both have the event-listener on them. And now if we add stopPropagation() to the div(child) element, the parent event-listener will not be triggered. Only the child event-listener will be triggered.
 
